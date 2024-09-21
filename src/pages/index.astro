@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-const books:[] = await getCollection('books')
+const books = await getCollection('books')
 
 
 export const prerender = true
@@ -20,7 +20,7 @@ export const prerender = true
 				{
 					books.map(book => {
 						const {slug, data} = book
-						const {title,author,img,readtime,description,buy, } = data
+						const {title,img,readtime,description, } = data
 
 							return(
 							<article class="flex gap-4">
